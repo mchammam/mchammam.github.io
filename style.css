@@ -13,44 +13,64 @@ $darker: #1A1E21;
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
 
 body {
   margin: 0;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-align: left;
 }
 
-@keyframes Gradient {
+@keyframes fadeIn {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    opacity: 0;
   }
   100% {
-    background-position: 0% 50%;
+    opacity: 1;
   }
 }
 .jumbotron {
   min-height: 100vh;
   display: flex;
-  background-color: #F0F0F0;
+  overflow: hidden;
+  justify-content: center;
+  background-color: #f0f0f0;
 }
 .jumbotron__container {
   margin: auto 0;
   padding: 5rem 1.5rem;
+  max-width: 41rem;
+}
+.jumbotron__container * {
+  animation: fadeIn 1s;
+}
+.jumbotron__desktop-img {
+  display: none;
+  padding: 5rem 1.5rem;
+  width: 100%;
+  max-width: 29rem;
+  margin-bottom: 2rem;
+  animation: shake 1.7s;
+}
+@media only screen and (min-width: 992px) {
+  .jumbotron__desktop-img {
+    display: block;
+  }
 }
 .jumbotron__title {
   margin: 0 0 1.2rem 0;
   font-size: 4rem;
   font-weight: 900;
   text-transform: uppercase;
-  color: #6AB490;
+  color: #6ab490;
   /*&::before {
       content: "";
       height: 0.5em;
@@ -59,7 +79,7 @@ body {
       margin-top: 0.4em;
       background-color: $darker;
       position: absolute;
-      display: none;
+      display: block;
   }*/
 }
 .jumbotron__lead {
@@ -73,6 +93,11 @@ body {
   width: 100%;
   margin-bottom: 2rem;
 }
+@media only screen and (min-width: 992px) {
+  .jumbotron__img {
+    display: none;
+  }
+}
 .jumbotron__btns {
   margin: 0 -1.5rem 3.6rem -1.5rem;
   display: flex;
@@ -81,10 +106,16 @@ body {
   justify-content: center;
   gap: 1rem 1.5rem;
 }
+@media only screen and (min-width: 992px) {
+  .jumbotron__btns {
+    margin: 0 0 3.6rem 0;
+    justify-content: left;
+  }
+}
 .jumbotron__btn-primary {
   padding: 0.8rem 1.625rem;
   border-radius: 1.8rem;
-  border: 3px solid #6AB490;
+  border: 3px solid #6ab490;
   text-align: center;
   font-size: 1rem;
   font-weight: 700;
@@ -94,7 +125,7 @@ body {
   color: #242424;
   cursor: pointer;
   transition: 0.3s;
-  background-color: #6AB490;
+  background-color: #6ab490;
 }
 .jumbotron__btn-primary:hover {
   border-radius: 0;
@@ -103,7 +134,7 @@ body {
 .jumbotron__btn-secondary {
   padding: 0.8rem 1.625rem;
   border-radius: 1.8rem;
-  border: 3px solid #6AB490;
+  border: 3px solid #6ab490;
   text-align: center;
   font-size: 1rem;
   font-weight: 700;
@@ -118,18 +149,37 @@ body {
   border-radius: 0;
   letter-spacing: 0.245em;
 }
-.jumbotron__icon {
-  height: 1em;
-  width: 1em;
-  margin-bottom: -0.15em;
-  display: none;
-}
 .jumbotron__description {
   font-size: 1.5rem;
   line-height: 1.5;
   color: #696969;
+  animation-duration: 2s;
+}
+.jumbotron__email {
+  margin: 2rem -2rem 0 -2rem;
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  color: #1a58a0;
+  letter-spacing: 0.145em;
+  text-decoration: none;
+  animation-duration: 2.5s;
+  transition: 0.3s;
+}
+.jumbotron__email:hover {
+  letter-spacing: 0.245em;
+}
+@media only screen and (min-width: 992px) {
+  .jumbotron__email {
+    margin: 2rem 0 0 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
 }
 
+.projects {
+  display: none;
+}
 .projects__container {
   padding: 0 1.5rem;
 }
@@ -140,12 +190,12 @@ body {
   text-align: center;
   font-size: 3rem;
   font-weight: 400;
-  color: #1A58A0;
+  color: #1a58a0;
 }
 .projects__card {
   margin-bottom: 2.5rem;
   border-radius: 1.5rem;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 .projects__card_container {
   padding: 1.5rem 1.125rem;
@@ -163,7 +213,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.2em;
-  color: #1A58A0;
+  color: #1a58a0;
 }
 .projects__description {
   margin-bottom: 2.5rem;
@@ -182,7 +232,7 @@ body {
 .projects__btn-primary {
   padding: 0.8rem 1.625rem;
   border-radius: 1.8rem;
-  border: 3px solid #6AB490;
+  border: 3px solid #6ab490;
   text-align: center;
   font-size: 1rem;
   font-weight: 700;
@@ -192,7 +242,7 @@ body {
   color: #242424;
   cursor: pointer;
   transition: 0.3s;
-  background-color: #6AB490;
+  background-color: #6ab490;
 }
 .projects__btn-primary:hover {
   border-radius: 0;
@@ -201,7 +251,7 @@ body {
 .projects__btn-secondary {
   padding: 0.8rem 1.625rem;
   border-radius: 1.8rem;
-  border: 3px solid #6AB490;
+  border: 3px solid #6ab490;
   text-align: center;
   font-size: 1rem;
   font-weight: 700;
@@ -221,22 +271,23 @@ body {
   letter-spacing: 0.055em;
   text-align: center;
   text-decoration: none;
-  color: #1A58A0;
+  color: #1a58a0;
 }
 
 .footer {
+  display: none;
   width: 100%;
   padding: 1rem;
   background-color: #242424;
   border-top: 1px solid #242424;
   text-align: center;
-  color: #F0F0F0;
+  color: #f0f0f0;
 }
 .footer__icon {
   height: 1.2em;
   width: 1.2em;
   margin-bottom: -0.15em;
-  fill: #F0F0F0;
+  fill: #f0f0f0;
 }
 
 .color_picker {

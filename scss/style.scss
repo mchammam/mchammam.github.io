@@ -6,11 +6,11 @@ $dark: #CC2A19;
 $darker: #1A1E21;
 */
 
-// Color system
+// Colors to use
 
 $white: #fff !default;
 //$gray-100: #f8f9fa !default;
-$gray-200: #F0F0F0 !default;
+$gray-200: #f0f0f0 !default;
 //$gray-300: #dee2e6 !default;
 //$gray-400: #ced4da !default;
 //$gray-500: #adb5bd !default;
@@ -20,52 +20,42 @@ $gray-800: #242424 !default;
 //$gray-900: #212529 !default;
 $black: #000 !default;
 
-$primary: #6AB490; //#268AFF;
-$primary-dark: #1A58A0;
-
+$primary: #6ab490; //#268AFF;
+$primary-dark: #1a58a0;
 
 // Fonts
-$font-family-sans-serif: -apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-"Helvetica Neue",
-Arial,
-"Noto Sans",
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol",
-"Noto Color Emoji";
-$font-family-base: 'Roboto',
-$font-family-sans-serif;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-base: "Roboto", $font-family-sans-serif;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 
 // Reboot
 *,
 *::before,
 *::after {
-  box-sizing: border-box; // 1
+    box-sizing: border-box; // 1
 }
 
 html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba($black, 0);
+    font-family: $font-family-base;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba($black, 0);
+
+    @media only screen and (min-width: 992px) {
+        font-size: 0.8rem;
+    }
 }
 
 body {
     margin: 0;
-    font-family: $font-family-base;
+    //font-family: $font-family-base;
     //@include font-size($font-size-base);
     //font-weight: $font-weight-base;
     //line-height: $line-height-base;
-    //color: $body-color;
     text-align: left;
-    //background-color: $body-bg;
-  }
+}
 
 // Mixins
 @mixin btn {
@@ -82,7 +72,7 @@ body {
     color: $gray-800;
 
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 
     &:hover {
         border-radius: 0;
@@ -90,33 +80,46 @@ body {
     }
 }
 
-
-@keyframes Gradient {
+//Animations
+@keyframes fadeIn {
     0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
+        opacity: 0;
     }
     100% {
-      background-position: 0% 50%;
+        opacity: 1;
     }
-  }
+}
+
 .jumbotron {
     min-height: 100vh;
-    //padding: 2em;
     display: flex;
-    //flex-direction: column;
-    //flex-wrap: wrap;
-    //justify-content: center;
-    //align-content: center;
-    //gap: 0.5em;
+    overflow: hidden;
+    justify-content: center;
     background-color: $gray-200;
-    //font-size: 1.5rem;
 
     &__container {
         margin: auto 0;
         padding: 5rem 1.5rem;
+        max-width: 41rem;
+
+        & * {
+            animation: fadeIn 1s;
+        }
+    }
+
+    &__desktop-img {
+        display: none;
+
+        padding: 5rem 1.5rem;
+        width: 100%;
+        max-width: 29rem;
+        margin-bottom: 2rem;
+
+        animation: shake 1.7s;
+
+        @media only screen and (min-width: 992px) {
+            display: block;
+        }
     }
 
     &__title {
@@ -134,10 +137,9 @@ body {
             margin-top: 0.4em;
             background-color: $darker;
             position: absolute;
-            display: none;
+            display: block;
         }*/
     }
-
 
     &__lead {
         margin-bottom: 3.4rem;
@@ -150,6 +152,10 @@ body {
     &__img {
         width: 100%;
         margin-bottom: 2rem;
+
+        @media only screen and (min-width: 992px) {
+            display: none;
+        }
     }
 
     &__btns {
@@ -159,6 +165,11 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem 1.5rem;
+
+        @media only screen and (min-width: 992px) {
+            margin: 0 0 3.6rem 0;
+            justify-content: left;
+        }
     }
 
     &__btn-primary {
@@ -170,23 +181,41 @@ body {
         @include btn;
     }
 
-    &__icon {
-        height: 1em;
-        width: 1em;
-        margin-bottom: -0.15em;
-        //fill: $lighter;
-        display: none;
-    }
-
     &__description {
         font-size: 1.5rem;
         line-height: 1.5;
-        color: $gray-600
+        color: $gray-600;
+
+        animation-duration: 2s;
     }
 
+    &__email {
+        margin: 2rem -2rem 0 -2rem;
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+        color: $primary-dark;
+        letter-spacing: 0.145em;
+        text-decoration: none;
+
+        animation-duration: 2.5s;
+        transition: 0.3s;
+
+        &:hover {
+            letter-spacing: 0.245em;
+        }
+
+        @media only screen and (min-width: 992px) {
+            margin: 2rem 0 0 0;
+            text-align: left;
+            text-transform: uppercase;
+        }
+    }
 }
 
 .projects {
+    display: none;
+
     &__container {
         padding: 0 1.5rem;
     }
@@ -263,11 +292,13 @@ body {
 }
 
 .footer {
+    display: none;
+
     width: 100%;
     padding: 1rem;
     background-color: $gray-800;
     border-top: 1px solid $gray-800;
-    
+
     //font-weight: 700;
     text-align: center;
     color: $gray-200;
@@ -280,12 +311,9 @@ body {
     }
 }
 
-img {
-    //display: none;
-}
-
 .color_picker {
-    display: none;//flex;
+    display: none;
+
     justify-content: center;
 
     &__color {
