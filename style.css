@@ -128,7 +128,6 @@ body {
   background-color: #6ab490;
 }
 .jumbotron__btn-primary:hover {
-  border-radius: 0;
   letter-spacing: 0.245em;
 }
 .jumbotron__btn-secondary {
@@ -146,7 +145,6 @@ body {
   transition: 0.3s;
 }
 .jumbotron__btn-secondary:hover {
-  border-radius: 0;
   letter-spacing: 0.245em;
 }
 .jumbotron__description {
@@ -178,35 +176,38 @@ body {
 }
 
 .projects {
-  display: flex;
-  justify-content: center;
+  background-color: #6ab490;
 }
 .projects__container {
+  display: grid;
+  margin-inline: auto;
   padding: 0 1.5rem;
+  gap: 1.5rem;
   max-width: 60rem;
 }
 .projects__header {
-  margin: 2rem -1.5rem 3.5rem -1.5rem;
+  margin: 0;
+  padding-block: 2rem 3.5rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   text-align: center;
   font-size: 3rem;
   font-weight: 400;
-  color: #1a58a0;
+  color: white;
 }
 .projects__card {
   position: relative;
   z-index: 1;
   margin-bottom: 2.5rem;
-  border-radius: 1.5rem;
-  border: 3px solid #f0f0f0;
+  border-radius: 1rem;
   background-color: #f0f0f0;
+  box-shadow: 0px 0px 10px 0px #696969;
 }
 .projects__thumbnail {
   position: relative;
   z-index: 2;
   width: 100%;
-  border-radius: 1.5rem 1.5rem 0 0;
+  border-radius: 1rem 1rem 0 0;
 }
 .projects__thumbnail-mobile {
   position: absolute;
@@ -270,7 +271,6 @@ body {
   background-color: #6ab490;
 }
 .projects__btn-primary:hover {
-  border-radius: 0;
   letter-spacing: 0.245em;
 }
 .projects__btn-secondary {
@@ -288,7 +288,6 @@ body {
   transition: 0.3s;
 }
 .projects__btn-secondary:hover {
-  border-radius: 0;
   letter-spacing: 0.245em;
 }
 .projects__link {
