@@ -8,6 +8,7 @@ module.exports = {
         'primary': '#6ab490',
         'accent': '#1a58a0',
         'default': '#f0f0f0',
+        'light': 'rgb(245, 245, 245)',
       },
     },
   },

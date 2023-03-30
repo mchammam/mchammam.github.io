@@ -182,11 +182,10 @@ body {
   display: grid;
   margin-inline: auto;
   padding: 0 1.5rem;
-  gap: 1.5rem;
-  max-width: 60rem;
   text-align: center;
   font-size: 1.5rem;
   line-height: 1.5;
+  color: #696969;
   color: rgb(245, 245, 245);
 }
 .projects__header {

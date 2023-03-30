@@ -35,115 +35,111 @@
 
         <section class="projects">
             <h2 class="projects__header">Projects</h2>
-            <div class="projects__container">
+            <div class="projects__container container gap-28">
                 <p>These are a few examples of my work. Please contact me if interested in more.</p>
 
-                <div class="projects__card">
+                <div class="projects__card md:py-20 pt-14">
 
-                    <video width="100%" height="100%" autoplay muted class="shadow-md shadow-primary">
-                        <source src="resources/videos/star-wars-data-explorer-mobile.webm" type="video/webm">                          Your browser does not support the video tag.
-                      </video>  
-                        
+                        <video autoplay muted class="h-96 mx-auto lg:mx-20 shadow-2xl rounded">
+                            <source src="resources/videos/star-wars-data-explorer-mobile.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
                         
                     <div class="projects__card_container">
-                        <h3 class="text-accent font-bold tracking-widest mt-4" href="">Star Wars Data Explorer</h3>
+                        <h3 class="text-accent font-bold tracking-widest text-left text-3xl" href="">Star Wars Data Explorer</h3>
+                        <div class="my-2 mt-5 flex justify-items-start gap-2 flex-wrap text-light">
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">TypeScript</span>
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">React</span>
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">React Router</span>
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">React Query</span>
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">Zod</span>
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">CSS Modules</span>
+                        </div>
                         <p class="projects__description">
-                            I am currently developing this ecommerce API based on Node.js.
-                            Check out my progress on GitHub!
+                            React-based Star Wars data explorer, which uses the <a class="text-accent hover:underline" href="https://swapi.dev/">SWAPI</a> under the hood. Utilizing React Query for efficient state and cache management, and React Router for client-side routing. The app is fully type-safe using the Zod library for API response validation and Typescript.
                         </p>
-                        <div class="my-2 mt-5 flex justify-items-start gap-2">
-                            <span class=" text-xs bg-primary p-1 px-3 rounded">NodeJS</span>
-                            <span class=" text-xs bg-primary p-1 px-3 rounded">NodeJS</span>
+                        
+                        <div class="flex flex-wrap my-7 gap-7 justify-center md:justify-start mt-14 md:mt-16">
+                            <a href="https://sparkling-fawn-snaps.cyclic.app" target="_blanc" class="rounded-full border-primary border-2 p-3 px-7 font-bold text-black hover:tracking-wider duration-300">Live Demo</a>
+                            <a href="https://codesandbox.io/p/github/mchammam/star-wars-data-explorer/" target="_blanc" class="rounded-full border-primary border-2 p-3 px-7 font-bold text-black hover:tracking-wider duration-300">CodeSandbox</a>
+                            <a href="https://github.com/mchammam/star-wars-data-explorer" target="_blanc" class="rounded-full border-primary border-2 p-3 px-7 font-bold text-black hover:tracking-wider duration-300">Github Repo</a>
                         </div>
-                        <div class="projects__btns">
-                            <a href="https://github.com/mchammam/ecommerce-api" target="_blanc" class="projects__btn-secondary">GitHub repo</a>
-                        </div>
-                        <a href="" target="_blanc" class="projects__link" style="display: none;">View source code in
-                            GitHub</a>
                     </div>
                 </div>
 
-
-                <div class="projects__card">
-                    <img class="projects__thumbnail" alt=""
-                        src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto:good,w_900/Challenges/bognvsqd34ueowkompeh.jpg" />
-                    <img class="projects__thumbnail-mobile" alt=""
-                        src="resources/img/project-thumbnail-1.png" />
+                <div class="projects__card md:py-20 md:px-16 flex flex-col gap-7 md:gap-20 lg:flex-row">
+                    <img class="md:h-96 mx-auto shadow-2xl rounded lg:order-last" alt=""
+                    src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto:good,w_900/Challenges/bognvsqd34ueowkompeh.jpg" />
+                    
                     <div class="projects__card_container">
-                        <!----modal-->
-                        <div class="modal"></div>
-                        <h3 class="projects__title" style="padding-top: 1.5rem;">
-                            Ecommerce product page
-                        </h3>
+                        <h3 class="text-accent font-bold tracking-widest text-left text-3xl" href="">Ecommerce Product Page</h3>
+
+                        <div class="my-2 mt-5 flex justify-items-start gap-2 flex-wrap text-light">
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">TypeScript</span>
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">React</span>
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">Sass</span>
+                        </div>
+
                         <p class="projects__description">
                             Mobile first ecommerce product page built using React.
                         </p>
-                        <div class="projects__btns">
-                            <a href="https://mchammam.github.io/ecommerce-product-page-main/" target="_blanc"
-                                class="projects__btn-primary">Live demo</a>
-                            <a href="https://github.com/mchammam/ecommerce-product-page-main" target="_blank"
-                                class="projects__btn-secondary">GitHub Repo</a>
+                        
+                        <div class="flex flex-wrap my-7 gap-7 justify-center md:justify-start mt-14 md:mt-16">
+                            <a href="https://mchammam.github.io/ecommerce-product-page-main/" target="_blanc" class="rounded-full border-primary border-2 p-3 px-7 font-bold text-black hover:tracking-wider duration-300">Live Demo</a>
+                            <a href="https://codesandbox.io/p/github/mchammam/ecommerce-product-page-main/" target="_blanc" class="rounded-full border-primary border-2 p-3 px-7 font-bold text-black hover:tracking-wider duration-300">CodeSandbox</a>
+                            <a href="https://github.com/mchammam/ecommerce-product-page-main" target="_blanc" class="rounded-full border-primary border-2 p-3 px-7 font-bold text-black hover:tracking-wider duration-300">Github Repo</a>
                         </div>
-                        <a href="" target="_blanc" class="projects__link" style="display: none;">View source code in
-                            GitHub</a>
                     </div>
                 </div>
 
-                <div class="projects__card">
-                    <img class="projects__thumbnail" style="display: none;" alt=""
-                        src="resources/img/project_thumbnail.jpg" />
+                <div class="projects__card py-7 md:py-20 md:px-16">                    
                     <div class="projects__card_container">
-                        <h3 class="projects__title" href="">Ecommerce API</h3>
+                        <h3 class="text-accent font-bold tracking-widest text-left text-3xl" href="">Ecommerce API</h3>
+                        
+                        <div class="my-2 mt-5 flex justify-items-start gap-2 flex-wrap text-light">
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">TypeScript</span>
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">React</span>
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">Sass</span>
+                        </div>
+
                         <p class="projects__description">
                             I am currently developing this ecommerce API based on Node.js.
-                            Check out my progress on GitHub!
-                        </p>
-                        <div class="my-2 mt-5 flex justify-items-start gap-2">
-                            <span class=" text-xs bg-primary p-1 px-3 rounded">NodeJS</span>
-                            <span class=" text-xs bg-primary p-1 px-3 rounded">NodeJS</span>
+                            Check out my progress on GitHub!                        </p>
+                        
+                        <div class="flex flex-wrap my-7 gap-7 justify-center md:justify-start mt-14 md:mt-16">
+                            <a href="https://codesandbox.io/p/github/mchammam/ecommerce-api" target="_blanc" class="rounded-full border-primary border-2 p-3 px-7 font-bold text-black hover:tracking-wider duration-300">CodeSandbox</a>
+                            <a href="https://github.com/mchammam/ecommerce-api" target="_blanc" class="rounded-full border-primary border-2 p-3 px-7 font-bold text-black hover:tracking-wider duration-300">Github Repo</a>
                         </div>
-                        <div class="projects__btns">
-                            <a href="https://github.com/mchammam/ecommerce-api" target="_blanc" class="projects__btn-secondary">GitHub repo</a>
-                        </div>
-                        <a href="" target="_blanc" class="projects__link" style="display: none;">View source code in
-                            GitHub</a>
                     </div>
                 </div>
 
-                <div class="projects__card">
-                    <img class="projects__thumbnail" style="display: none;" alt="" src="resources/img/api-thumbnail.svg"
-                        style="padding: 1rem; background-color: white;" />
+                <div class="projects__card py-7 pb-10 md:py-20 md:px-16">                    
                     <div class="projects__card_container">
-                        <h3 class="projects__title">Qandell API</h3>
+                        <h3 class="text-accent font-bold tracking-widest text-left text-3xl" href="">Qandell API</h3>
+                        
+                        <div class="my-2 mt-5 flex justify-items-start gap-2 flex-wrap text-light">
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">PHP</span>
+                            <span class=" text-sm bg-primary p-1 px-3 rounded">MySQL</span>
+                        </div>
+
                         <p class="projects__description">
                             In this project I built a complex API based on PHP and MySQL. The API was "the brain and
                             coordinator" of a survey service with both a web based admin/client dashboard and a mobile
                             application. The funcionality of this API was complex, it handled cronjobs,
                             matching target groups, statistics and more. My work was to build the API and also work with 
                             the overall infrastructure of the whole service.
-
                         </p>
-                        <p class="projects__description-details" style="display: none;">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex nihil, possimus dolor nobis
-                            vitae provident optio suscipit id. Cum magni facere, ipsum facilis deserunt quod tempora,
-                            corporis debitis et sapiente distinctio porro dicta sunt error doloremque reiciendis
-                            reprehenderit. Voluptatem illo labore quos nam praesentium officiis omnis cum molestiae eum
-                            natus ea iusto ab, tenetur similique, nemo aliquid earum doloribus iste! Eum blanditiis
-                            nostrum ex similique cum recusandae quo inventore provident temporibus sapiente! Soluta iste
-                            iure magni aperiam ab ipsa eligendi, hic natus quam quod esse dolores est iusto, repudiandae
-                            ducimus, quisquam ipsum. Corporis mollitia ea laboriosam nostrum ex maiores error.
-                        </p>
-
-                        <div class="projects__btns" style="margin-bottom: 0">
-                            <button href="https://mchammam.github.io/ecommerce-product-page-main/" target="_blanc"
-                                class="projects__btn-secondary" style="display: none;">Details</button>
-                        </div>
-                        <a href="" target="_blanc" class="projects__link" style="display: none;">View source code in
-                            GitHub</a>
+                        
+                        
                     </div>
                 </div>
 
-               
+            </div>
+        </section>
+
+        <section class="bg-default justify-center hidden">
+            <div class="container flex justify-center">
+                <img src="./resources/img/technologies.png" alt="Technologies" />
             </div>
         </section>
 

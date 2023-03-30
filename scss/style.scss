@@ -214,17 +214,19 @@ body {
 }
 
 .projects {
-    background-color: #6ab490   ;
+    background-color: #6ab490;
+
     &__container {
         display: grid;
         margin-inline: auto;
         padding: 0 1.5rem;
-        gap: 1.5rem;
-        max-width: 60rem;
+        //gap: 1.5rem;
+        //max-width: 60rem;
 
         text-align: center;
         font-size: 1.5rem;
         line-height: 1.5;
+        color: $gray-600;
         color: rgb(245, 245, 245);
     }
 
